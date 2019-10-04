@@ -1,0 +1,252 @@
+{
+  "id": "4999d07c-1d69-4ae3-b473-3680524062af",
+  "version": "2.0",
+  "name": "QA Test",
+  "url": "https://gist.github.com/",
+  "tests": [{
+    "id": "59f1affd-925e-49a8-8590-5edddaed3cd6",
+    "name": "Create",
+    "commands": [{
+      "id": "e51fd798-b62d-4ed1-80c9-bf9279dad89b",
+      "comment": "",
+      "command": "open",
+      "target": "https://gist.github.com/discover",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3b002531-50b5-465f-9810-8a0f0a990ef6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.octicon-plus > path",
+      "targets": [
+        ["css=.octicon-plus > path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "b3753a9b-3958-413d-8eb2-8531f1352315",
+      "comment": "",
+      "command": "type",
+      "target": "name=gist[description]",
+      "targets": [
+        ["name=gist[description]", "name"],
+        ["css=.input-block", "css:finder"],
+        ["xpath=//input[@name='gist[description]']", "xpath:attributes"],
+        ["xpath=//div[@id='gists']/input", "xpath:idRelative"],
+        ["xpath=//div/div/input", "xpath:position"]
+      ],
+      "value": "qa-gist.md"
+    }, {
+      "id": "9612e8be-872e-4354-af61-78bbc3e16b72",
+      "comment": "",
+      "command": "type",
+      "target": "name=gist[contents][][name]",
+      "targets": [
+        ["name=gist[contents][][name]", "name"],
+        ["css=.filename", "css:finder"],
+        ["xpath=//input[@name='gist[contents][][name]']", "xpath:attributes"],
+        ["xpath=//div[@id='gists']/div[2]/div/div/div/input[2]", "xpath:idRelative"],
+        ["xpath=//div/input[2]", "xpath:position"]
+      ],
+      "value": "qa-gist.md"
+    }, {
+      "id": "bde2bed9-237a-4eae-9f1c-eff7f26d04c9",
+      "comment": "",
+      "command": "type",
+      "target": "name=gist[contents][][value]",
+      "targets": [
+        ["name=gist[contents][][value]", "name"],
+        ["css=.file-editor-textarea", "css:finder"],
+        ["xpath=//textarea[@name='gist[contents][][value]']", "xpath:attributes"],
+        ["xpath=//div[@id='gists']/div[2]/div/div[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "import {Selector} from 'testcafe';"
+    }, {
+      "id": "5f8ec960-25e0-4f4d-984b-de462783064d",
+      "comment": "",
+      "command": "editContent",
+      "target": "css=.CodeMirror-code",
+      "targets": [
+        ["css=.CodeMirror-code", "css:finder"],
+        ["xpath=//div[@id='gists']/div[3]/div/div[2]/div/div[5]/div/div/div/div/div[5]", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div/div/div/div[5]", "xpath:position"]
+      ],
+      "value": "<div style=\"position: relative;\"><div class=\"CodeMirror-gutter-wrapper\" style=\"left: -53px;\" contenteditable=\"false\"><div class=\"CodeMirror-linenumber CodeMirror-gutter-elt\" style=\"left: 0px; width: 21px;\">1</div></div><pre class=\" CodeMirror-line \" role=\"presentation\"><span role=\"presentation\">import {Selector} from 'testcafe';</span></pre></div>"
+    }, {
+      "id": "2a0c1aaf-d33c-461a-b8d8-712e8adbb318",
+      "comment": "",
+      "command": "click",
+      "target": "name=gist[public]",
+      "targets": [
+        ["name=gist[public]", "name"],
+        ["css=.js-gist-create:nth-child(1)", "css:finder"],
+        ["xpath=//button[@name='gist[public]']", "xpath:attributes"],
+        ["xpath=//form[@id='new_gist']/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Create public gist')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d96c9c59-91a0-4a4f-8700-8ca45d1817b4",
+      "comment": "",
+      "command": "verifyText",
+      "target": "linkText=qa-gist.md",
+      "targets": [
+        ["linkText=qa-gist.js", "linkText"],
+        ["css=.css-truncate-target > a", "css:finder"],
+        ["xpath=//a[contains(text(),'qa-gist.js')]", "xpath:link"],
+        ["xpath=//main[@id='gist-pjax-container']/div/div/div/h1/strong/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/AriBasyari13/4978611669c060a1e6f8f364eeb7126d')]", "xpath:href"],
+        ["xpath=//strong/a", "xpath:position"],
+        ["xpath=//a[contains(.,'qa-gist.js')]", "xpath:innerText"]
+      ],
+      "value": "qa-gist.md"
+    }]
+  }, {
+    "id": "7694c2d6-6c24-4a3a-b7de-802b7ca0cf55",
+    "name": "Edit",
+    "commands": [{
+      "id": "098b5245-dbc5-4948-81f2-bd7be2a44672",
+      "comment": "",
+      "command": "open",
+      "target": "/AriBasyari13/1e3176f21339dd5a8b2c149d90a5517d",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d4c06f86-9076-4262-9317-ec7a5f0dc6a8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.octicon-pencil",
+      "targets": [
+        ["css=.octicon-pencil", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "b3329d80-76d4-4080-a9c6-70470aa6e933",
+      "comment": "",
+      "command": "type",
+      "target": "css=.file-editor-textarea",
+      "targets": [
+        ["css=.file-editor-textarea", "css:finder"],
+        ["xpath=//textarea[@name='gist[contents][][value]']", "xpath:attributes"],
+        ["xpath=//div[@id='gists']/div[2]/div[2]/div[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "import {Selector} from 'testcafe';\\nfixture `Getting Started`\\n    .page `https://gist.github.com/discover`;"
+    }, {
+      "id": "f7c3b09c-4b20-46bd-aaec-c2578cd85f02",
+      "comment": "",
+      "command": "editContent",
+      "target": "css=.CodeMirror-code",
+      "targets": [
+        ["css=.CodeMirror-code", "css:finder"],
+        ["xpath=//div[@id='gists']/div[2]/div[2]/div[2]/div/div[5]/div/div/div/div/div[5]", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div/div/div/div[5]", "xpath:position"]
+      ],
+      "value": "<div style=\"position: relative;\"><div class=\"CodeMirror-gutter-wrapper\" style=\"left: -624px;\" contenteditable=\"false\"><div class=\"CodeMirror-linenumber CodeMirror-gutter-elt\" style=\"left: 0px; width: 879px;\">1</div></div><pre class=\" CodeMirror-line \" role=\"presentation\"><span role=\"presentation\"><span class=\"cm-keyword\">import</span> {<span class=\"cm-def\">Selector</span>} <span class=\"cm-keyword\">from</span> <span class=\"cm-string\">'testcafe'</span>;</span></pre></div><div style=\"position: relative;\"><div class=\"CodeMirror-gutter-wrapper\" style=\"left: -624px;\" contenteditable=\"false\"><div class=\"CodeMirror-linenumber CodeMirror-gutter-elt\" style=\"left: 0px; width: 879px;\">2</div></div><pre class=\" CodeMirror-line \" role=\"presentation\"><span role=\"presentation\"><span class=\"cm-variable\">fixture</span> <span class=\"cm-string-2\">`Getting Started`</span></span></pre></div><div style=\"position: relative;\"><div class=\"CodeMirror-gutter-wrapper\" style=\"left: -624px;\" contenteditable=\"false\"><div class=\"CodeMirror-linenumber CodeMirror-gutter-elt\" style=\"left: 0px; width: 879px;\">3</div></div><pre class=\" CodeMirror-line \" role=\"presentation\"><span role=\"presentation\">    .<span class=\"cm-property\">page</span> <span class=\"cm-string-2\">`https://gist.github.com/discover`</span>;</span></pre></div>"
+    }, {
+      "id": "6b726f77-2fa5-47d2-9c8d-40323c33e05e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=(//button[@type='submit'])[3]", "xpath:attributes"],
+        ["xpath=//form[@id='edit_gist_98702373']/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Update public gist')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "0c1e2867-a379-4b23-8076-a3e7fc2e5281",
+    "name": "Delete",
+    "commands": [{
+      "id": "dc9638f2-7fdd-40e8-9492-016bd82d572b",
+      "comment": "",
+      "command": "open",
+      "target": "https://gist.github.com/AriBasyari13/1e3176f21339dd5a8b2c149d90a5517d",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f37970b0-72d6-4104-9949-1b3de04fbe90",
+      "comment": "",
+      "command": "chooseOkOnNextConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e5a452d9-9149-4723-afc0-b5a58d9993d5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-danger",
+      "targets": [
+        ["css=.btn-danger", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//main[@id='gist-pjax-container']/div/div/div/ul/li[2]/form/button", "xpath:idRelative"],
+        ["xpath=//li[2]/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,' Delete')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f0ddc84e-4263-4ea1-a379-78a5898b4f13",
+      "comment": "",
+      "command": "assertConfirmation",
+      "target": "Are you positive you want to delete this Gist?",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f60cd4bf-f5dc-40f6-9480-afecc9cf0996",
+      "comment": "",
+      "command": "webdriverChooseOkOnVisibleConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "7775d769-9925-4d6c-a69b-dfc60af23fa5",
+    "name": "View",
+    "commands": [{
+      "id": "59231950-9844-407f-88c7-62700fcf92bd",
+      "comment": "",
+      "command": "open",
+      "target": "https://gist.github.com/discover",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c6c247da-dd5f-4c91-8449-20bb3ddf2906",
+      "comment": "",
+      "command": "click",
+      "target": "css=.octicon-plus",
+      "targets": [
+        ["css=.octicon-plus", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "09072efa-79ff-47c5-9f7b-32a454153982",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=See all of your gists",
+      "targets": [
+        ["linkText=See all of your gists", "linkText"],
+        ["css=.flex-auto > a", "css:finder"],
+        ["xpath=//a[contains(text(),'See all of your gists')]", "xpath:link"],
+        ["xpath=//main[@id='gist-pjax-container']/div/div/div/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/AriBasyari13')])[6]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'See all of your gists')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "c0c8f2b6-a225-4d4a-92ac-f9d6684cae50",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["59f1affd-925e-49a8-8590-5edddaed3cd6"]
+  }],
+  "urls": ["https://gist.github.com/discover", "https://gist.github.com/", "https://gist.github.com/AriBasyari13/1e3176f21339dd5a8b2c149d90a5517d"],
+  "plugins": []
+}
